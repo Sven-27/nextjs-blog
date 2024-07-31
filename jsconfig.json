@@ -2,6 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "checkJs": true,
+    "jsx": "preserve"
+  },
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.js", "**/*.jsx"],
 }
