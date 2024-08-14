@@ -10,6 +10,7 @@
   font-weight: bold;
 }
 
+.menuButton,
 .mobileLinks{
   display: none;
 }
@@ -17,6 +18,11 @@
 @media (max-width: 768px){
   .links{
     display: none;
+  }
+
+  .menuButton{
+    display: block;
+    cursor: pointer;
   }
 
   .mobileLinks{

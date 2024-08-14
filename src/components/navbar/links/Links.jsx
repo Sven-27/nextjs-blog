@@ -2,25 +2,7 @@
 import { useState } from 'react'
 import styles from "./links.module.css"
 import NavLink from '../navLink/NavLink'
-
-const links = [
-  { 
-    path: '/', 
-    title: 'Home'
- },
-  { 
-    path: '/about', 
-    title: 'About' 
-  },
-  { 
-    path: '/contact', 
-    title: 'Contact' 
-  },
-  { 
-    path: '/blog', 
-    title: 'Blog' 
-  }
-]
+import { links } from '@/data/links/links.js' 
 
 const Links = () => {
   const [open, setOpen] = useState(false)
@@ -51,7 +33,7 @@ const Links = () => {
           )
         }
       </div>
-      <button className={styles.menu} onClick={() => setOpen(prev => !prev)}>Menu</button>
+      <button className={styles.menuButton} onClick={() => setOpen(prev => !prev)}>Menu</button>
       {
         open && (
           <div className={styles.mobileLinks}>
