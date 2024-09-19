@@ -1,8 +1,26 @@
-import React from 'react'
+import styles from './contact.module.css'
+import Image from 'next/image'
 
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
+   <div className={styles.container}>
+    <div className={styles.imgContainer}>
+      <Image className={styles.img} src="/media/images/contact.png" alt="" fill />
+    </div>
+    <div className={styles.formContainer}>
+      <form action="" className={styles.form}>
+        <input type="text" placeholder="Name and Surname" />
+        <input type="text" placeholder="Email address" />
+        <input type="text" placeholder="Phone number (optional)" />
+        <textarea 
+         name=""
+         id=""
+         placeholder="message"
+         />
+         <button>Send</button>
+      </form>
+    </div>
+   </div>
   )
 }
 

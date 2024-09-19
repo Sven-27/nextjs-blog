@@ -35,15 +35,25 @@
           color: var(--btn);
         }
       }
+      
+      @media only screen and (max-width: 768px){
+        flex-direction: column;
+        gap: 50px;
+      }
     }
   }
 
   .imgContainer{
     position: relative;
     flex: 1;
-   
+    
     .img{
       object-fit: contain;
     }
   }
+  
+  @media only screen and (max-width: 768px){
+    text-align: center;
+    flex-direction: column;
+   }
 }

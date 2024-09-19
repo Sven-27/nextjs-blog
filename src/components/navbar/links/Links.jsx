@@ -3,6 +3,7 @@ import { useState } from 'react'
 import styles from "./links.module.css"
 import NavLink from '../navLink/NavLink'
 import { links } from '@/data/links/links.js' 
+import Image from 'next/image'
 
 const Links = () => {
   const [open, setOpen] = useState(false)
@@ -33,7 +34,7 @@ const Links = () => {
           )
         }
       </div>
-      <button className={styles.menuButton} onClick={() => setOpen(prev => !prev)}>Menu</button>
+      <Image className={styles.menuButton} src="/media/images/menu.png" width="30" height="30" alt="" onClick={() => setOpen(prev => !prev)} /> 
       {
         open && (
           <div className={styles.mobileLinks}>

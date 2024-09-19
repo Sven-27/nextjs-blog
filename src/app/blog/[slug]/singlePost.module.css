@@ -1,0 +1,60 @@
+.container{
+  display: flex;
+  gap: 100px;
+
+  .imgContainer{
+    flex: 1;
+    position: relative;
+    height: calc(100vh - 200px);
+
+    .img{
+      object-fit: contain;
+      height: 5;
+    }
+
+    @media only screen and (max-width: 768px){
+      display: none;
+    }
+  }
+
+  .textContainer{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .title{
+      font-size: 64px;
+    }
+    .detailContainer{
+      display: flex;
+      gap: 20px;
+
+      .avatar{
+        object-fit:cover;
+        border-radius: 50%;
+      }
+
+      .detailsPerson,
+      .detailsPost{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .creator,
+        .published{
+          color: gray;
+          font-weight: bold;
+        }
+        .person,
+        .date{
+          font-weight: 500;
+        }
+      }
+      
+      .content{
+        font-size: 20px;
+      }
+    }
+  }
+}
